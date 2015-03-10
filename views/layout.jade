@@ -4,6 +4,8 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     title= title
     link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(href='http://fonts.googleapis.com/css?family=Oregano' rel='stylesheet' type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     block stylesheet
   body
@@ -11,5 +13,12 @@ html
     block content
     include footer
     script(type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js')
+    script(type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js')
+    script(type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js')
     script(type='text/javascript' src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+
+    script(src="/javascripts/models/models.js")
+    script(src="/javascripts/views/appView.js")
+    script(src="/javascripts/views/postView.js")
+    script(src="/javascripts/app.js")
     block script

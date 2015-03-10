@@ -1,20 +1,20 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
 h1.logo {
 	margin: 5px;
 	position: absolute;
+	color: #ff3535;
 }
 
 .navbar {
-	background-color: #8ed2fb;
+	/*background-color: #8ed2fb;*/
+	background-color: #ff3535;
 	margin: 0px;
+/*Uncomment below before deploying: commented for dev purposes only*/
+/*	border: none;
+	border-radius: 0;*/
 }
 
 .navbar-nav {
@@ -22,11 +22,11 @@ h1.logo {
 }
 
 .navbar-default .navbar-nav li > a {
-	color: black;
+	color: white;
 }
 
 .navbar-default .navbar-nav li > a:hover {
-	color: white;
+	color: #d3d3d3;
 }
 
 .jheader {
@@ -37,14 +37,17 @@ h1.logo {
 	padding: 0px;
 }
 
-.jumbotron.index {
-	background-image: url("/images/books.jpg");
+.jumbotron {
+	background-color: #ff3535;
 	height: 350px;
+	/*padding-top: 225px;*/
 }
 
 h1.slogan {
-	font-size: 48px;
+	font-size: 88px;
 	color: white;
+	margin-bottom: 0;
+	font-family: 'Oregano', cursive;
 }
 
 .row {
@@ -56,20 +59,27 @@ h1.slogan {
 	margin: 0 auto;
 }
 
-.howitworks {
+button.cta {
+	background-color: #35FFFF;
+}
+
+.row.cta {
+	padding-left: 40%;
+	padding-right: 40%;
+}
+
+/*.howitworks {
 	text-align: center;
 	font-size: 20px;
 }
 
 .howitworks a {
 	color: #13a2f6;
-}
-
-/*.jumbotron.how {
-	color: white;
-	background-image: url("/images/books.jpg");
-	height: 500px;
 }*/
+
+.applylink {
+	color: #13a2f6;
+}
 
 .readerapplyform {
 	text-align: center;

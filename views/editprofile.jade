@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	button(id='showForm', class='btn')
+	form(role='form', method='post', action='/testi', id='profile')
+		.form-group
+			input(type='text', name='name', placeholder='What is your name?', id='name', data-target='username')
+		.form-group
+			input(type='text', name='bio', placeholder='Tell us about yourself', id='bio', data-target='userbio')
+		.form-group
+			textarea(type='text', name='favoritebooks', placeholder='What are your favorite books?', id='books', data-target='userbooks')
+		.form-group
+			textarea(type='text', name='favoritejslibs', placeholder='What are some of your favorite Javascript libraries?', id='libs', data-target='userlibs')
+		input(type='submit')
+	h3#username
+	p#userbio
+	p#userbooks
+	p#userlibs
+
+block script
+	script(type='text/javascript' src='/javascripts/editprofile.js')

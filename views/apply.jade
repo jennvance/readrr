@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	.readerapplyform
+		h2 Apply here.
+			//- p: a(href='/auth/facebook') Log In With Facebook
+		form(role='form', method='post', action='/formsubmit')
+			.form-group
+				input(type='text', name='firstname', placeholder='First Name', id='fname')
+			.form-group
+				input(type='text', name='lastname', placeholder='Last Name', id='lname')
+			.form-group
+				input(type='email', name='email', placeholder='Email Address', id='email')
+			.form-group
+				input(type='text', name='referralcode', placeholder='Referral Code (Optional)' id='refcode')
+			.form-group
+				textarea(type='text',name='why', placeholder='Why Do You Want To Be a Beta Reader? (Minimum: 200 words, maximum: 500 words)', rows=5, cols=30, id='why')
+			.form-group
+				textarea(type='text', name='favoritebooks', placeholder='What are your 5 favorite books?', rows=5, cols=30, id='favbooks')
+			.form-group
+				input(type='submit') 
