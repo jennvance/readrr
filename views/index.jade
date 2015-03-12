@@ -4,32 +4,50 @@ block content
 	//- h2 Hand picked betas.
 	//- 	//- p: a(href='/auth/facebook') Log In With Facebook
 	.container-fluid
-		.jumbotron.index
+		.jumbotron
 			.row.jheader
 				h1.slogan Your First Reader. Because Your Cat Will Never Tell You The Truth.
+			.row.cta
+				button.btn.btn-lg(type="button", data-toggle="modal", data-target="#myModal", class='cta') Get Your First Reader Free
+				//- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+				.modal.fade#myModal(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+					.modal-dialog
+						.modal-content
+							.modal-header
+								button(type='button', class='close', data-dismiss='modal')
+									.span(aria-hidden='true') &times;
+										.span.sr-only Close
+								h4.modal-title#myModalLabel Author? Sign up for an access code and get your first reader free.
+							.modal-body No spam. Just tips, tricks, tactics and strategies for how to succeed as an author.
+							form#meow(role='form', method='post', action='/emailsubmit')
+								input.form-control(name='newfirstname', id='newfirstname', placeholder="Your First Name")
+								input.form-control(type='email', name='newemailaddress', id='newemailaddress', placeholder="Your email address")
+								.modal-footer
+									button(type='button', class='btn btn-default', data-dismiss='modal') No, thank you
+									button(type='submit', class='btn btn-primary') Get My Free Reader
 		.row.jheader
 			h2 Find a Beta Reader. Get Feedback BEFORE You Hit Publish
 			p Get a beta reader for honest feedback before you publish. Request a reader with one click and get feedback in as little as 48 hours.
+		//- .row.cta
+		//- 	button.btn.btn-lg(type="button", data-toggle="modal", data-target="#myModal", class='cta') Get Your First Reader Free
+		//- 	//- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+		//- 	.modal.fade#myModal(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+		//- 		.modal-dialog
+		//- 			.modal-content
+		//- 				.modal-header
+		//- 					button(type='button', class='close', data-dismiss='modal')
+		//- 						.span(aria-hidden='true') &times;
+		//- 							.span.sr-only Close
+		//- 					h4.modal-title#myModalLabel Author? Sign up for an access code and get your first reader free.
+		//- 				.modal-body No spam. Just tips on how to get the most out of your Readrr experience.
+		//- 				form#meow(role='form', method='post', action='/emailsubmit')
+		//- 					input.form-control(name='newfirstname', id='newfirstname', placeholder="Your First Name")
+		//- 					input.form-control(type='email', name='newemailaddress', id='newemailaddress', placeholder="Your email address")
+		//- 					.modal-footer
+		//- 						button(type='button', class='btn btn-default', data-dismiss='modal') No, thank you
+		//- 						button(type='submit', class='btn btn-primary') Get My Access Code
 		.row.cta
-			button.btn.btn-lg(type="button", data-toggle="modal", data-target="#myModal", class='cta') Get Your First Reader Free
-			//- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
-			.modal.fade#myModal(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-				.modal-dialog
-					.modal-content
-						.modal-header
-							button(type='button', class='close', data-dismiss='modal')
-								.span(aria-hidden='true') &times;
-									.span.sr-only Close
-							h4.modal-title#myModalLabel Author? Sign up for an access code and get your first reader free.
-						.modal-body No spam. Just tips on how to get the most out of your Readrr experience.
-						form#meow(role='form', method='post', action='/emailsubmit')
-							input.form-control(name='newfirstname', id='newfirstname', placeholder="Your First Name")
-							input.form-control(type='email', name='newemailaddress', id='newemailaddress', placeholder="Your email address")
-							.modal-footer
-								button(type='button', class='btn btn-default', data-dismiss='modal') No, thank you
-								button(type='submit', class='btn btn-primary') Get My Access Code
-		.row.cta
-			a(href='/apply', class="btn btn-lg applylink") Aspiring Beta? Apply here.
+			a(href='/be-a-reader', class="btn btn-lg applylink") Aspiring Beta? Apply here.
 		.row
 			.col-lg-4
 				h3 Effortless

@@ -30,7 +30,7 @@ router.post('/', function(req, res) {
 
 
 	//does redirect go here or inside save() method?
-	res.redirect('/');
+	res.redirect('/thank-you');
 
 });
 

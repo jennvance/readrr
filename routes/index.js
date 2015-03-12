@@ -12,7 +12,7 @@ router.get('/howitworks', function(req, res) {
   });
 });
 
-router.get('/apply', function(req, res) {
+router.get('/be-a-reader', function(req, res) {
   res.render('apply', { 
   	// title: 'Express' 
   });
@@ -29,6 +29,10 @@ router.get('/blog', function(req, res) {
   });
 
 });
+
+router.get('/thank-you', function(req,res){
+  res.render('thankyouapplicant');
+})
 
 router.get('/editprofile', function(req, res) {
   res.render('editprofile', { 

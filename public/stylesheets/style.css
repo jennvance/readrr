@@ -5,16 +5,15 @@ body {
 h1.logo {
 	margin: 5px;
 	position: absolute;
-	color: #ff3535;
+	color: #ff4537;
 }
 
 .navbar {
-	/*background-color: #8ed2fb;*/
-	background-color: #ff3535;
+	background-color: #ff4537;
 	margin: 0px;
 /*Uncomment below before deploying: commented for dev purposes only*/
-/*	border: none;
-	border-radius: 0;*/
+	border: none;
+	border-radius: 0;
 }
 
 .navbar-nav {
@@ -38,13 +37,12 @@ h1.logo {
 }
 
 .jumbotron {
-	background-color: #ff3535;
-	height: 350px;
-	/*padding-top: 225px;*/
+	background-color: #ff4537;
+	box-shadow: 0px 5px 5px #ff746a;
 }
 
 h1.slogan {
-	font-size: 88px;
+	font-size: 80px;
 	color: white;
 	margin-bottom: 0;
 	font-family: 'Oregano', cursive;
@@ -55,12 +53,14 @@ h1.slogan {
 }
 
 .modal input {
-	width: 75%;
+	width: 50%;
 	margin: 0 auto;
+	margin-bottom: 5px;
 }
 
 button.cta {
-	background-color: #35FFFF;
+	background-color: #37f1ff;
+	box-shadow: 5px 5px 5px;
 }
 
 .row.cta {
@@ -79,6 +79,7 @@ button.cta {
 
 .applylink {
 	color: #13a2f6;
+	/*color: #359aff;*/
 }
 
 .readerapplyform {

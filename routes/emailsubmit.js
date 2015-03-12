@@ -19,7 +19,7 @@ router.post('/', function(req, res) {
 		console.log(subscriberList);
 	})
 
-	res.redirect('/');
+	res.redirect('/authors');
 });
 
 module.exports = router;
