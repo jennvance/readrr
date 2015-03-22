@@ -7,13 +7,13 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
-// var howitworks = require('./routes/howitworks');
 // var apply = require('./routes/apply');
 var applicationform = require('./routes/formsubmit');
 // var blog = require('./routes/blog');
 // var editprofile = require('./routes/editprofile');
 var emailsubmit = require('./routes/emailsubmit');
 var api = require('./routes/blogapi');
+var profilesubmit = require('./routes/profilesubmit');
 
 var app = express();
 
@@ -39,6 +39,7 @@ app.use('/emailsubmit', emailsubmit);
 // app.use('/blog', blog);
 // app.use('/editprofile', editprofile);
 app.use('/blogapi', api);
+app.use('/profilesubmit', profilesubmit);
 
 
 // catch 404 and forward to error handler

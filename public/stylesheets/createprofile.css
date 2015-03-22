@@ -1,0 +1,37 @@
+.profilephoto {
+	height: 200px;
+	width: 200px;
+	border: 1px dotted black;
+}
+
+h2, h6 {
+	text-align: center;
+}
+
+form {
+	width: auto;
+	margin-left: 35%;
+	margin-right: 35%;
+}
+
+.edit {
+	display: none;
+}
+
+.input-sm {
+	/*width: 300px;*/
+}
+
+a#username {
+	
+}
+
+.editabl:hover {
+	color: #666;
+	background-color: #eee;
+}
+
+.edit-input {
+	display: block;
+	width: 100%;
+}

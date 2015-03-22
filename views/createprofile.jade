@@ -1,0 +1,21 @@
+extends layout
+
+block stylesheet
+	link(rel='stylesheet', href='/stylesheets/createprofile.css')
+
+block content
+	h2 Create your profile here
+	form.form-horizontal#profileForm(role="form", method="post", action="/profilesubmit")
+		h3(id='a' class='profilevalue') #{name || 'steve'}
+		.form-group
+			input(type="text" class="edit field" name='name' id='profname')
+		h3(id='b' class='profilevalue')= city
+		.form-group
+			input(type="text" class="edit field" name='city' id='profcity')
+		h3(id='c' class='profilevalue')= book
+		.form-group
+			input(type="text" class="edit field" name='favoritebook' id='profbook')
+		button(type="button" class='btn btn-default' id="editprofile") Click to Edit		
+		.input-group
+			input(type='submit' class='btn btn-info')
+

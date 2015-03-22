@@ -4,9 +4,10 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
     title= title
     link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    link(href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet")
     link(href='http://fonts.googleapis.com/css?family=Oregano' rel='stylesheet' type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css')
-    //- link(href='images/favicon.ico', rel='icon', type='image/x-icon')
+    link(href='images/favicon.ico', rel='icon', type='image/x-icon')
     link(rel='stylesheet', href='/stylesheets/style.css')
     block stylesheet
   body
@@ -17,7 +18,9 @@ html
     script(type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js')
     script(type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js')
     script(type='text/javascript' src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js")
 
+    script(src='/javascripts/main.js')
     script(src="/javascripts/models/models.js")
     script(src="/javascripts/views/appView.js")
     script(src="/javascripts/views/postView.js")

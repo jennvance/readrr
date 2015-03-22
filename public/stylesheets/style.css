@@ -2,6 +2,11 @@ body {
   font: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
 h1.logo {
 	margin: 5px;
 	position: absolute;
@@ -32,10 +37,6 @@ h1.logo {
 	text-align: center;
 }
 
-.container-fluid {
-	padding: 0px;
-}
-
 .jumbotron {
 	background-color: #ff4537;
 	box-shadow: 0px 5px 5px #ff746a;
@@ -56,6 +57,10 @@ h1.slogan {
 	width: 50%;
 	margin: 0 auto;
 	margin-bottom: 5px;
+}
+
+.emailsubmit {
+	background-color: #37f1ff; 
 }
 
 button.cta {
