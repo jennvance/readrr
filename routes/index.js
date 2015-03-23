@@ -35,9 +35,9 @@ router.get('/new-reader-challenge', function(req, res){
 
 router.get('/createprofile', function(req, res){
   // Profile.find({_id : req.user._id}, function(err, user){
-  Profile.findOne({_id : "550f24e0ccd3becd69f78cca"}, function(err, user){
+  // Profile.findOne({_id : "550f24e0ccd3becd69f78cca"}, function(err, user){
     
-    if ( err ) { console.log('error! ', err)}
+  //   if ( err ) { console.log('error! ', err)}
     res.render('createprofile', { 
       title: 'Create Profile',
       // function datastuff() {
@@ -48,12 +48,12 @@ router.get('/createprofile', function(req, res){
       //   }
       // }
 
-      name: user.name,
-      city: user.city,
-      book: user.favoritebook 
+      // name: user.name,
+      // city: user.city,
+      // book: user.favoritebook 
     });
   })
-})
+// })
 
 router.get('/editprofile', function(req, res) {
   res.render('editprofile', { 

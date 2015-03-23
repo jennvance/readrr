@@ -6,13 +6,13 @@ block stylesheet
 block content
 	h2 Create your profile here
 	form.form-horizontal#profileForm(role="form", method="post", action="/profilesubmit")
-		h3(id='a' class='profilevalue') #{name || 'steve'}
+		h3(id='a' class='profilevalue') #{name || 'Your Name'}
 		.form-group
 			input(type="text" class="edit field" name='name' id='profname')
-		h3(id='b' class='profilevalue')= city
+		h3(id='b' class='profilevalue') #{city || 'Your City'}
 		.form-group
 			input(type="text" class="edit field" name='city' id='profcity')
-		h3(id='c' class='profilevalue')= book
+		h3(id='c' class='profilevalue') #{book || "Your Favorite Book"}
 		.form-group
 			input(type="text" class="edit field" name='favoritebook' id='profbook')
 		button(type="button" class='btn btn-default' id="editprofile") Click to Edit		

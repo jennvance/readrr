@@ -2,6 +2,7 @@ extends layout
 
 block content
 	.readerapplyform
+		h3 Want to unlock achievements, earn rewards, discover new authors and get paid to do what you already love?
 		h2 Apply here.
 			//- p: a(href='/auth/facebook') Log In With Facebook
 		form(role='form', method='post', action='/formsubmit')
@@ -14,8 +15,12 @@ block content
 			.form-group
 				input(type='text', name='referralcode', placeholder='Referral Code (Optional)' id='refcode')
 			.form-group
-				textarea(type='text',name='why', placeholder='Why Do You Want To Be a Beta Reader? (Minimum: 200 words, maximum: 500 words)', rows=5, cols=30, id='why')
+				textarea(type='text',name='why', placeholder='Why Do You Want To Be a Beta Reader? (Minimum: 100 words)', rows=5, cols=30, id='why', onkeypress='activateSubmit();' data-wordmin="5")
 			.form-group
-				textarea(type='text', name='favoritebooks', placeholder='What are your 5 favorite books?', rows=5, cols=30, id='favbooks')
+				textarea(type='text', name='favoritegenres', placeholder='Describe your favorite genres. Be as creative or thorough as you like.', rows=3, cols=30, id='favgenres', onkeypress='activateSubmit();' data-wordmin="10")
 			.form-group
-				input(type='submit') 
+				textarea(type='text', name='favoritebooks', placeholder='What are your 5 favorite books, regardless of genre?', rows=2, cols=30, id='favbooks', onkeypress='activateSubmit();' data-wordmin="5")
+			.form-group
+				input(type='submit' id='sub' disabled='disabled')
+block script
+	script(type='text/javascript' src='/javascripts/clientapply.js') 
