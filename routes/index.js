@@ -13,15 +13,15 @@ router.get('/be-a-reader', function(req, res) {
   });
 });
 
-router.get('/blog', function(req, res) {
-  //Backbone.find() all documents inside the Post collection.
-  Post.find({}, function(err, docs){
-    res.render('blog', { 
-    title: 'Blog',
-    //assign all docs to "posts"
-    posts: docs 
-  });
-  });
+// router.get('/blog', function(req, res) {
+//   //Backbone.find() all documents inside the Post collection.
+//   Post.find({}, function(err, docs){
+//     res.render('blog', { 
+//     title: 'Blog',
+//     //assign all docs to "posts"
+//     posts: docs 
+//   });
+//   });
 
 });
 

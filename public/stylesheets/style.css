@@ -2,6 +2,10 @@ body {
   font: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
+a {
+	color: #13a2f6;
+}
+
 .container-fluid {
 	padding-left: 0;
 	padding-right: 0;

@@ -1,4 +1,17 @@
 extends layout
 
+block stylesheet
+	link(rel='stylesheet', href='/stylesheets/authors.css')
+
 block content
-	h1 This is the author page
+	.body
+		h3 This is the author resource page. We're still developing it, so in the meantime please enjoy the following articles.
+		.row
+			a(href="http://www.hughhowey.com/its-the-reader-stupid/") Who Are Your Customers?
+		.row
+			a(href="http://kk.org/thetechnium/2008/03/1000-true-fans/") How to Begin Growing Your Fan Base
+		.row
+			a(href="http://www.jamesaltucher.com/how-to-self-publish-a-bestseller/") How to Publish a Best Seller
+		.row
+			a(href="https://www.psychologytoday.com/blog/the-athletes-way/201401/reading-fiction-improves-brain-connectivity-and-function") Reading Is Good For the Brain
+
