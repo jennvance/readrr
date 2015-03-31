@@ -1,3 +1,5 @@
+//attempt at form validation
+//check word count before submit 
 function activateSubmit(){
 	var $this = $(this);
 	var length = $('#why').val().split(" ").length;
@@ -9,6 +11,8 @@ function activateSubmit(){
 	}
 }
 
+//the following code is from...some website about form validation.
+//not compatible with current form. Learning purposes only.
 $(document).ready(function(){
 
 $('.submit').click(function(){

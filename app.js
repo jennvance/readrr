@@ -9,10 +9,8 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index');
 // var apply = require('./routes/apply');
 var applicationform = require('./routes/formsubmit');
-// var blog = require('./routes/blog');
 // var editprofile = require('./routes/editprofile');
 var emailsubmit = require('./routes/emailsubmit');
-var api = require('./routes/blogapi');
 var profilesubmit = require('./routes/profilesubmit');
 
 var app = express();
@@ -36,9 +34,7 @@ app.use('/', routes);
 // app.use('/apply', apply);
 app.use('/formsubmit', applicationform);
 app.use('/emailsubmit', emailsubmit);
-// app.use('/blog', blog);
 // app.use('/editprofile', editprofile);
-app.use('/blogapi', api);
 app.use('/profilesubmit', profilesubmit);
 
 
