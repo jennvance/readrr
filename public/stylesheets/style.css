@@ -3,7 +3,7 @@ body {
 }
 
 a {
-	color: #13a2f6;
+	color: #378dff;
 }
 
 .container-fluid {
@@ -64,12 +64,13 @@ h1.slogan {
 }
 
 .emailsubmit {
-	background-color: #37f1ff; 
+	background-color: #ff4537;
+	color: white;
 }
 
 button.cta {
 	background-color: #37f1ff;
-	box-shadow: 5px 5px 5px;
+	box-shadow: 2px 2px 2px black;
 }
 
 .row.cta {
@@ -87,7 +88,8 @@ button.cta {
 }*/
 
 .applylink {
-	color: #13a2f6;
+	color: #378dff;
+	/*color: #13a2f6;*/
 	/*color: #359aff;*/
 }
 
@@ -127,3 +129,26 @@ button.cta {
 a:hover {
 	text-decoration: none;
 }
+
+.form-control {
+
+}
+
+#applicationform {
+	width: 33%;
+	margin: 0 auto;
+	background-color: lightgray;
+	padding: 2%;
+	border-radius: 10px;
+}
+
+#applicationform #sub {
+	/*background-color: #13a2f6;*/
+	color: white;
+	background-color: #ff4537;
+}
+
+.error {
+	color: red!important;
+}
+

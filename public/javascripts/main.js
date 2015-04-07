@@ -50,10 +50,6 @@ $(document).ready(function(){
 
 	})
 
-		$(".row:nth-child(1)").css("background-color", "blue");
-
-		$("div").each(console.log($(this)));
-
 
 })
 
