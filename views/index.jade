@@ -5,10 +5,11 @@ block content
 	//- 	//- p: a(href='/auth/facebook') Log In With Facebook
 	.container-fluid
 		.jumbotron
-			.row.jheader
-				h1.slogan Your First Reader. Because Your Cat Will Never Tell You The Truth.
-			.row.cta
-				button.btn.btn-lg(type="button", data-toggle="modal", data-target="#myModal", class='cta') Get Your First Reader Now
+			.row.centered
+				h2.slogan Your First Reader. 
+				h4.slogan.tagline Because Your Cat Will Never Tell You The Truth
+			.row.cta.centered
+				button.btn.btn-lg(type="button", data-toggle="modal", data-target="#myModal", class='cta') Get Your First Reader
 				//- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
 				.modal.fade#myModal(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
 					.modal-dialog
@@ -17,27 +18,29 @@ block content
 								button(type='button', class='close', data-dismiss='modal')
 									.span(aria-hidden='true') &times;
 										.span.sr-only Close
-								h4.modal-title#myModalLabel Author? Sign up to access our army of Beta Readers.
-							.modal-body No spam, ever. Just tactics and strategies for Reader-centered authorship.
-							form#meow(role='form', method='post', action='/emailsubmit')
-								input.form-control(name='newfirstname', id='newfirstname', placeholder="Your First Name")
-								input.form-control(type='email', name='newemailaddress', id='newemailaddress', placeholder="Your email address")
+								h4.modal-title#myModalLabel Readrr.io is now in private beta mode. Sign up to learn about special opportunities for early adopters.
+							//- .modal-body 
+							form(role='form', method='post', action='/emailsubmit')
+								input.form-control(name='newfirstname', id='newfirstname', placeholder="Your first name" required)
+								input.form-control(type='email', name='newemailaddress', id='newemailaddress', placeholder="Your email address" required)
 								.modal-footer
 									button(type='button', class='btn btn-default', data-dismiss='modal') No, thank you
-									button(type='submit', class='btn emailsubmit') Get My First Reader
-		.row.jheader
-			h2 Find a Beta Reader. Get Feedback BEFORE You Hit Publish
-			p Get a beta reader for honest feedback before you publish. Request a reader with one click and get feedback in as little as 48 hours.
-		.row.cta
-			a(href='/be-a-reader', class="btn btn-lg applylink") Aspiring Beta? Apply here.
-		.row
+									button(type='submit', class='btn emailsubmit') Sounds good
+		.row.centered
+			h2 Find a Beta Reader. Get Feedback Before You Hit Publish
+			p Get a beta reader for honest critique before you publish. Request a reader with one click and get feedback in as little as 48 hours
+		.row.centered#applylink
+			//- p Our beta reader program offers monetary compensation, badges you can exchange for swag, and a chance to contribute to a community that values the written word as much as you do.
+			a(href='/be-a-reader')
+				button(type="button" class="btn btn-default btn-lg") Aspiring Beta? Apply Here.
+		.row#graytext
 			.col-lg-4
 				h3 Effortless
-				p Well, relatively - you do have to write your manuscript first. You tell us what genre and demographic your book is targeting and we'll find you a reader who matches that description.
+				p Well, relatively - you do have to write your manuscript first. You tell us who your target audience is and we'll find you readers who match that description.
 			.col-lg-4
 				h3 Vetted, Highly Trained Readers
-				p We select bibliophiles, bookworms, and English majors to complete our world class training program before joining our army of beta readers.
+				p We select self-identified bibliophiles, bookworms, and scholars to complete our world class training program before joining our team of beta readers.
 			.col-lg-4
 				h3 High Rate of Return
-				p Inviting fans to critique your story lets you make improvements before you release it to the world, increasing the book's potential value for its entire "shelf-life."
+				p Inviting fans to critique your story lets you make improvements before you release it, increasing the book's potential value for its entire "shelf life."
 

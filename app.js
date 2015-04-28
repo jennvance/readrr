@@ -8,7 +8,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 // var apply = require('./routes/apply');
-var applicationform = require('./routes/formsubmit');
+var applicationform = require('./routes/applicationsubmit');
 // var editprofile = require('./routes/editprofile');
 var emailsubmit = require('./routes/emailsubmit');
 var profilesubmit = require('./routes/profilesubmit');
@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 // app.use('/howitworks', howitworks);
 // app.use('/apply', apply);
-app.use('/formsubmit', applicationform);
+app.use('/applicationsubmit', applicationform);
 app.use('/emailsubmit', emailsubmit);
 // app.use('/editprofile', editprofile);
 app.use('/profilesubmit', profilesubmit);

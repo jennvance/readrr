@@ -1,20 +1,17 @@
-body {
+html, body {
   font: 16px 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  height: 100%;
 }
 
-a {
-	color: #378dff;
+.wrap {
+	min-height: 100%;
+	height: auto;
+	margin: 0 auto -125px;
+	padding-bottom: 125px;
 }
 
-.container-fluid {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-h1.logo {
-	margin: 5px;
-	position: absolute;
-	color: #ff4537;
+a:hover {
+	text-decoration: none;
 }
 
 .navbar {
@@ -34,33 +31,62 @@ h1.logo {
 }
 
 .navbar-default .navbar-nav li > a:hover {
-	color: #d3d3d3;
+	color: #ffd9d7;
 }
 
-.jheader {
+.container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.centered {
 	text-align: center;
 }
 
 .jumbotron {
 	background-color: #ff4537;
 	box-shadow: 0px 5px 5px #ff746a;
+	height: 350px;
 }
 
-h1.slogan {
-	font-size: 80px;
+h1.logo {
+	margin: 5px;
+	position: absolute;
+	font-size: 40px;
+/*	float: right;*/
+}
+
+.logo a {
 	color: white;
-	margin-bottom: 0;
+}
+
+.slogan {
+	color: white;
 	font-family: 'Oregano', cursive;
 }
 
+h2.slogan {
+	font-size: 64px;
+	/*margin-bottom: 0;*/
+}
+
+h4.tagline {
+	font-size: 24px;
+}
+
 .row {
-	padding: 2%;
+	padding: 1%;
 }
 
 .modal input {
 	width: 50%;
 	margin: 0 auto;
-	margin-bottom: 5px;
+	margin-top: 15px;
+}
+
+#myModalLabel {
+	width: 75%;
+	margin: 0 auto;
 }
 
 .emailsubmit {
@@ -69,38 +95,60 @@ h1.slogan {
 }
 
 button.cta {
-	background-color: #37f1ff;
-	box-shadow: 2px 2px 2px black;
+/*	background-color: #37f1ff; original light blue*/
+/*	background-color: #77ff89; light green*/
+	/*background-color: #EAFF50; yellow*/
+	background-color: #84f6ff;
+	box-shadow: 1px 1px 1px #545454;
+	color: #545454;
 }
 
 .row.cta {
-	padding-left: 40%;
-	padding-right: 40%;
+/*	padding-left: 40%;
+	padding-right: 40%;*/
 }
 
-/*.howitworks {
-	text-align: center;
-	font-size: 20px;
+#applylink {
+	padding-bottom: 5%;
+	padding-top: 3%;
 }
 
-.howitworks a {
-	color: #13a2f6;
-}*/
 
-.applylink {
-	color: #378dff;
-	/*color: #13a2f6;*/
-	/*color: #359aff;*/
+#graytext h3 {
+	color: #494949;
+}
+
+.container-fluid {
+	color: #494949;
+}
+
+#graytext .col-lg-4 {
+	padding-left: 30px;
+	padding-right: 30px;
+	max-width: 450px;
+}
+
+.row#graytext {
+	padding-left: 5%;
+	padding-bottom: 2%;
+	background-color: #ededed;
 }
 
 .readerapplyform {
 	text-align: center;
+	padding: 2%;
+	padding-top: 1%;
+}
+
+.readerapplyform h4 {
+	width: 50%;
+	margin: 0 auto;
 }
 
 .footer {
 	background-color: dimgray;
 	color: white;
-	margin-top: 3%;
+	height: 130px;
 }
 
 .column {
@@ -124,31 +172,127 @@ button.cta {
 
 .column li > a {
 	color: white;
-}
-
-a:hover {
 	text-decoration: none;
 }
 
-.form-control {
+.twitter-follow-button {
 
+}
+
+#twitterFollow {
+	padding: 2%;
+	padding-right: 3%;
+	float: right;
+}
+.form-control:focus {
+	border-color: #ffb4af;
+	box-shadow: inset 0 1px 1px #ffb4af;
+
+}
+
+#appHeadline {
+	text-align: center;
+	margin-top: 0;
+/*	background-color: #ededed;*/
+	background-color: lightgray;
+	padding: 1%;
 }
 
 #applicationform {
 	width: 33%;
 	margin: 0 auto;
-	background-color: lightgray;
+/*	background-color: lightgray;*/
+	background-color: darkgray;
 	padding: 2%;
 	border-radius: 10px;
+	margin-bottom: 25px;
 }
 
-#applicationform #sub {
+#applicationform #submitapp {
 	/*background-color: #13a2f6;*/
 	color: white;
 	background-color: #ff4537;
 }
 
-.error {
-	color: red!important;
+#faq {
+/*	color: #378dff;
+	font-size: 20px;*/
 }
+
+#faq {
+	border: 1px solid #ff4537;
+	width: 75%;
+	margin-left: 12%;
+	margin-right: 12%;
+	margin-top: 4%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+#faq h3 {
+	margin: 1%;
+	margin-top: 3%;
+}
+
+#faq a {
+	text-decoration: none;
+}
+.panel-default {
+	box-shadow: none;
+}
+
+.panel {
+	box-shadow: none;
+	border: none;
+}
+
+.panel-default > .panel-heading {
+	background-color: white;
+}
+
+
+.panel-group .panel-heading+.panel-collapse .panel-body {
+	border-top: none;
+}
+
+.panel-title > a {
+  color: #494949;
+}
+
+.panel-body {
+	color: gray;
+	font-size: 14px;
+}
+
+#jobs {
+	text-align: center;
+	margin-top: 10%;
+}
+#jobs a {
+	color: #ff4537;
+	font-weight: bold;
+	text-decoration: none;
+}
+#thankyou {
+	text-align: center;
+	padding-top: 5%;
+}
+
+#blogcta {
+	margin-top: 3%;
+}
+
+#blogcta a {
+	color: #ff4537;
+	font-weight: bold;
+}
+
+#graypanel {
+	background-color: gainsboro;
+	width: 50%;
+	margin: 0 auto;
+	padding: 1%;
+	border-radius: 10px;
+}
+
 

@@ -1,7 +1,7 @@
 extends layout
 
 block content
-	button(id='showForm', class='btn')
+	button(id='showForm', class='btn') Edit Profile
 	form(role='form', method='post', action='/testi', id='profile')
 		.form-group
 			input(type='text', name='name', placeholder='What is your name?', id='name', data-target='username')
@@ -11,7 +11,7 @@ block content
 			textarea(type='text', name='favoritebooks', placeholder='What are your favorite books?', id='books', data-target='userbooks')
 		.form-group
 			textarea(type='text', name='favoritejslibs', placeholder='What are some of your favorite Javascript libraries?', id='libs', data-target='userlibs')
-		input(type='submit')
+		input(type='submit' class="btn btn-primary")
 	h3#username
 	p#userbio
 	p#userbooks

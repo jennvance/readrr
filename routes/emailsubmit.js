@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Subscriber = require('../models/emaillistsignup');
+var Subscriber = require('../dbmodels/emaillistsignup');
 
 router.post('/', function(req, res) {
 	// console.log(req.body);
@@ -19,7 +19,7 @@ router.post('/', function(req, res) {
 		console.log(subscriberList);
 	})
 
-	res.redirect('/authors');
+	res.redirect('/');
 });
 
 module.exports = router;

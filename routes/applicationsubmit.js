@@ -1,16 +1,16 @@
 var express = require('express');
 var router = express.Router();
-var ReaderApplicant = require('../models/readerapplication');
+var ReaderApplicant = require('../dbmodels/readerapplication');
 
 router.post('/', function(req, res) {
-	console.log(req.body);
 	//extract the params and assign them to variables
 	var applicantFirst = req.param('firstname');
 	var applicantLast = req.param('lastname');
 	var applicantEmail = req.param('email');
 	var applicantRefCode = req.param('referralcode');
 	var applicantWhy = req.param('why');
-	var applicantBooks = req.param('favoritebooks');
+	var applicantGenres = req.param('favoritegenres');
+	var referredBy = req.param('referredby');
 
 	//create a new applicant object
 	var currentApplicant = new ReaderApplicant({
@@ -19,7 +19,8 @@ router.post('/', function(req, res) {
 		email: applicantEmail,
 		referralcode: applicantRefCode,
 		why: applicantWhy,
-		favoritebooks: applicantBooks
+		favoritegenres: applicantGenres,
+		referredby: referredBy
 	});
 
 	//store new applicant in database
@@ -29,7 +30,7 @@ router.post('/', function(req, res) {
 	})
 
 
-	//does redirect go here or inside save() method?
+	//should redirect go here or inside save() method?
 	res.redirect('/thank-you');
 
 });

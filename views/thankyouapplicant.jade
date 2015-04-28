@@ -1,5 +1,12 @@
 extends layout
 
 block content
-	h1 Thank you for submitting your application to be a beta reader. 
-	p Check your inbox shortly for a brief Beta Reading challenge.
+	.wrap
+		#thankyou
+			#graypanel
+				h3 We're excited you want to join the ranks!
+				p We'll review your application and get back to you shortly
+			p#blogcta In the meantime, head over to our 
+				span
+					a(href='/blog') blog
+				|  so we can get to know each other better

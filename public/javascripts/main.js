@@ -49,6 +49,10 @@ $(document).ready(function(){
 		})
 
 	})
+	//event handler called by Apply.jade
+	$("#faq").on('click', function(){
+		console.log("It worked");
+	})
 
 
 })

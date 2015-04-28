@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Profile = require('../models/createprof');
+var Profile = require('../dbmodels/createprof');
 
 router.get('/', function(req, res) {
   res.render('index', { title: 'Readrr' });
@@ -49,10 +49,24 @@ router.get('/editprofile', function(req, res) {
   });
 });
 
-router.get('/authors', function(req, res) {
-  res.render('authors', { 
-    title: 'Author Tools' 
+router.get('/jobs', function(req,res){
+  res.render('jobs', {
+    title: 'Work with Us'
   });
+});
+
+router.get('/authors', function(req, res) {
+  // Profile.findOne({_id: "553aad8fdcee63add0614928"}, function(profileSchema, data){
+  //   console.log(data);
+  //   console.log(data.name);
+    res.render('authors', { 
+      title: 'Author Tools',
+      // readerName: data.name,
+      // readerCity: data.city,
+      // readerBook: data.favoritebook 
+    });   
+  // })
+
 });
 
 module.exports = router;

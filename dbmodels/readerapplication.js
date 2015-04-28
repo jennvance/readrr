@@ -10,7 +10,8 @@ var readerAppSchema = mongoose.Schema({
 		default: null
 	},
 	why: String,
-	favoritebooks: String
+	favoritegenres: String,
+	referredby: String
 })
 
 var ReaderApplicant = mongoose.model('ReaderApplicant', readerAppSchema);

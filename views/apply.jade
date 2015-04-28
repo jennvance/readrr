@@ -1,26 +1,51 @@
 extends layout
 
 block content
+	h4#appHeadline We're on a mission to curate an A-team of beta readers, provide world class training, and connect them with authors all over the internet.
 	.readerapplyform
-		h4 Want to unlock achievements, earn rewards, discover new authors and get paid to do what you already love?
-		h2 Apply here.
+		h3 Want to join? Fill out the form below.
 			//- p: a(href='/auth/facebook') Log In With Facebook
-		form(role='form', method='post', action='/formsubmit', id="applicationform")
+		form(role='form', method='post', action='/applicationsubmit', id="applicationform")
 			.form-group
-				input(type='text', name='firstname', placeholder='First Name', id='fname' class="form-control")
+				input(type='text', name='firstname', placeholder='First Name', id='fname' class="form-control" required)
 			.form-group
-				input(type='text', name='lastname', placeholder='Last Name', id='lname' class="form-control")
+				input(type='text', name='lastname', placeholder='Last Name', id='lname' class="form-control" required)
 			.form-group
-				input(type='email', name='email', placeholder='Email Address', id='email' class="form-control")
+				input(type='email', name='email', placeholder='Email Address', id='email' class="form-control" required)
+			//- .form-group
+			//- 	input(type='text', name='referralcode', placeholder='Referral Code (Optional)' id='refcode' class="form-control")
 			.form-group
-				input(type='text', name='referralcode', placeholder='Referral Code (Optional)' id='refcode' class="form-control")
+				textarea(type='text',name='why', placeholder='Why do you want to be a beta reader?', rows=5, cols=30, id='why', class="form-control", data-wordmin="5" required)
 			.form-group
-				textarea(type='text',name='why', placeholder='Why Do You Want To Be a Beta Reader? (Minimum: 100 words)', rows=5, cols=30, id='why', class="form-control", data-wordmin="5")
+				textarea(type='text', name='favoritegenres', placeholder='What do you like to read? Name genres, authors, titles, etc.', rows=3, cols=30, id='favgenres', class="form-control" required)
 			.form-group
-				textarea(type='text', name='favoritegenres', placeholder='Describe your favorite genres. Be as creative or thorough as you like.', rows=3, cols=30, id='favgenres', class="form-control")
+				input(type='text', name="referredby", placeholder="How did you hear about us?" id="referredby" class="form-control")
 			.form-group
-				textarea(type='text', name='favoritebooks', placeholder='What are your 5 favorite books, regardless of genre?', rows=2, cols=30, id='favbooks', class="form-control")
-			.form-group
-				input(type='submit' id='sub' class="btn")
-//- block script
-//- 	script(type='text/javascript' src='/javascripts/clientapply.js') 
+				input(type='submit' id='submitapp' class="btn")
+		#faq 
+			h3 F.A.Q.
+			.panel-group(id="accordion" role="tablist" aria-multiselectable="true")
+				.panel.panel-default
+					.panel-heading(role="tab" id="headingOne")
+						h4.panel-title
+							a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne") What does a beta reader do?
+					.panel-collapse.collapse(id="collapseOne" role="tabpanel" aria-labelledby="headingOne")
+						.panel-body A beta reader gives authors feedback from the point of view of the reader. Beta readers are not editors. Rather, they are potential fans who articulate their thoughtful opinions about an unpublished work.
+				.panel.panel-default
+					.panel-heading(role="tab" id="headingTwo")
+						h4.panel-title
+							a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") What do I get for being a beta reader?
+					.panel-collapse.collapse(id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo")
+						.panel-body Some of the many compelling reasons to be a beta reader are the chance to discover up-and-coming authors, earn Readrr tokens redeemable in the Readrr online store, and get paid to do what you already love.
+				.panel.panel-default
+					.panel-heading(role="tab" id="headingThree")
+						h4.panel-title
+							a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree") What are the requirements to be a beta reader?
+					.panel-collapse.collapse(id="collapseThree" role="tabpanel" aria-labelledby="headingThree")
+						.panel-body You must really love books and reading. You must be able to provide written feedback that communicates the precise strengths and shortcomings of a manuscript.
+				.panel.panel-default
+					.panel-heading(role="tab" id="headingFour")
+						h4.panel-title
+							a(class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour") What is the process for becoming a beta reader?
+					.panel-collapse.collapse(id="collapseFour" role="tabpanel" aria-labelledby="headingFour")
+						.panel-body After we approve your application, you'll receive a link to a practice challenge, which you'll complete at your convenience. We'll review the results for standards compliance and enroll you in our world class beta reading course. In the event it falls short of our standards, we'll invite you to try again.

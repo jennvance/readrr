@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Profile = require('../models/createprof');
+var Profile = require('../dbmodels/createprof');
 
 router.post('/', function(req, res) {
 	//assign incoming data to DB schema
