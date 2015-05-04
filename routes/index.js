@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Readrr' });
 });
 
-router.get('/be-a-reader', function(req, res) {
+router.get('/be-a-beta-reader', function(req, res) {
   res.render('apply', { 
   	title: 'Apply' 
   });

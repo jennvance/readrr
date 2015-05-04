@@ -176,7 +176,8 @@ button.cta {
 }
 
 .twitter-follow-button {
-
+	max-width: 30px;
+	border-radius: 5px;
 }
 
 #twitterFollow {
@@ -193,16 +194,14 @@ button.cta {
 #appHeadline {
 	text-align: center;
 	margin-top: 0;
-/*	background-color: #ededed;*/
-	background-color: lightgray;
+	background-color: #e0e0e0;
 	padding: 1%;
 }
 
 #applicationform {
 	width: 33%;
 	margin: 0 auto;
-/*	background-color: lightgray;*/
-	background-color: darkgray;
+	background-color: #bdbdbd;
 	padding: 2%;
 	border-radius: 10px;
 	margin-bottom: 25px;
